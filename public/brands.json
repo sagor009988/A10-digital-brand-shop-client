@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "id":"apple" ,
       "title": "APPLE BRAND",
       "image": "https://i.ibb.co/5MxpmCp/l-intro-1650830667.jpg",
       "price": 50,
@@ -9,35 +9,35 @@
 
     },
     {
-      "id": 2,
+      "id":"samsung" ,
       "title": "SAMSUNG BRAND",
       "image": "https://i.ibb.co/ch8nBFN/sony.jpg",
       "price": 100,
       "details": "Discover the magic of your love story with [Your Company Name] Wedding Party Management Service. Your wedding day is significant moments of your life, and we are here to make it truly exceptional."
     },
     {
-      "id": 3,
+      "id": "sony",
       "title": "SONY BRAND",
       "image": "https://i.ibb.co/mGdppdc/sony-brand.jpg",
       "price": 75,
       "details": "Countdown to a Spectacular New Year with [Your Company Name] New Year's Eve Party Service! As the year draws to a close, it's time to plan the ultimate celebration to welcome the possibilities of the future."
     },
     {
-      "id": 4,
+      "id": "hp",
       "title": "HP BRAND",
       "image": "https://i.ibb.co/cNnKGrR/download.png",
       "price": 60,
       "details": "Celebrate Love and Milestones with [Your Company Name] Anniversary Party Service! Whether you're commemorating a milestone anniversary or simply want to cherish the love you share,  you create an unforgettable anniversary celebration."
     },
     {
-      "id": 5,
+      "id": "lg",
       "title": "LG BRAND",
       "image": "https://i.ibb.co/W6fnH9w/lg-logo-brand.jpg",
       "price": 40,
       "details": "Our experienced team of event planners specializes in crafting memorable graduation parties that honor your  the stage for exciting new beginnings. Whether it's high school, college, or any other academic achievement, we're here to make "
     },
     {
-      "id": 6,
+      "id": "huawei",
       "title": "HUAWEI BRAND",
       "image": "https://i.ibb.co/RBVVR5L/images.png",
       "price": 30,
