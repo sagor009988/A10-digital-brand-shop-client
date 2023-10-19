@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './Nab.css'
-// import { AuthContext } from "./AuthProvider/AuthProvider";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 
 const Navbar = () => {
-//   const { user,logOut } = useContext(AuthContext);
-//   console.log(user);
+  const { user,logOut } = useContext(AuthContext);
+  console.log(user);
 
 
   const handleSignOut = () => {
@@ -22,28 +23,28 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink className="text-lg font-semibold" to={"/"}>
+        <NavLink  to={"/"}>
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-lg font-semibold" to={"/addProducts"}>
+        <NavLink  to={"/addProducts"}>
           Add Products
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-lg font-semibold" to={"/updateProducts"}>
+        <NavLink  to={"/updateProducts"}>
           update Products
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-lg font-semibold" to={"/myCart"}>
+        <NavLink  to={"/myCart"}>
           My Cart
         </NavLink>
       </li>
       
       <li>
-        <NavLink className="text-lg font-semibold" to={"/login"}>
+        <NavLink  to={"/login"}>
           Login
         </NavLink>
       </li>
@@ -81,7 +82,7 @@ const Navbar = () => {
           </ul>
         </div>
         <img
-          className="h-14 w-14 rounded-full "
+          className="h-10 w-28 rounded-full "
           src="/logo.png"
           alt=""
         />
@@ -90,10 +91,10 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {/* {user ? (
+        {user ? (
           <>
-            <p>{user.email}</p>
-            <img className="h-10 w-10 rounded-full mx-2" src={user.photoURL} alt="" />
+            {/* <p className="text-sm">{user.email}</p> */}
+            <img className="h-8 w-8 rounded-full mx-2" src={user.photoURL} alt="" />
             
             <a onClick={handleSignOut} className="btn btn-sm">
               Sign Out
@@ -103,7 +104,7 @@ const Navbar = () => {
           <Link to={"/login"}>
             <button className="btn btn-sm">Login</button>
           </Link>
-        )} */}
+        )}
       </div>
     </div>
   );

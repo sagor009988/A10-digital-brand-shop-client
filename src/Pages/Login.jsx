@@ -33,11 +33,7 @@ const Login = () => {
         naviGate("/");
       })
       .catch((error) => {
-        Swal(
-          "warning",
-          "Password Error.please Input Currect Password",
-          "warning"
-        );
+        Swal.fire('please input currect email and password!')
       });
   };
   const handleGoogle = () => {
