@@ -13,6 +13,7 @@ const Brands = ({brands}) => {
                 brands.map(brand=><Brand key={brand.id} brand={brand}></Brand>)
             }
             </div>
+        
             
         </div>
     );
