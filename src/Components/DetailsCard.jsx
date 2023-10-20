@@ -4,7 +4,9 @@ const DetailsCard = ({ prodctDetails }) => {
   const { brand, image, type, price, rating, text, _id } = prodctDetails || {};
 
 
-  const handleAddTOCart=()=>{
+  const handleAddTOCart=e=>{
+    e.preventDefault()
+    const form=e.target;
 
   }
 

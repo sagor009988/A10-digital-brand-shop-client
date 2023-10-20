@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './Nab.css'
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import DarkMode from "../../DarkMode";
 
 
 const Navbar = () => {
@@ -32,11 +33,7 @@ const Navbar = () => {
           Add Products
         </NavLink>
       </li>
-      <li>
-        <NavLink  to={"/updateProducts"}>
-          update Products
-        </NavLink>
-      </li>
+      
       <li>
         <NavLink  to={"/myCart"}>
           My Cart
@@ -44,9 +41,12 @@ const Navbar = () => {
       </li>
       
       <li>
-        <NavLink  to={"/login"}>
+        <NavLink className="" to={"/login"}>
           Login
         </NavLink>
+      </li>
+      <li>
+
       </li>
       
       
@@ -87,9 +87,13 @@ const Navbar = () => {
           alt=""
         />
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex ml-8">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <div className="mr-20">
+        <DarkMode></DarkMode>
+        </div>
       </div>
+      
       <div className="navbar-end">
         {user ? (
           <>
