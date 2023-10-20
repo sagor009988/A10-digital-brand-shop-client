@@ -41,6 +41,8 @@ const AddProducts = () => {
 
     return (
         <div className='bg-fuchsia-300 my-6'>
+            
+            <h1 className='text-bold text-blue-600 text-center my-5'>Add Products</h1>
             <form onSubmit={handleAddProducts}>
            <div className='flex gap-5'>
             
@@ -64,7 +66,7 @@ const AddProducts = () => {
            <textarea name='text' className="textarea textarea-secondary w-full" placeholder="About Products"></textarea> <br /> <br />
            
 
-           <input type="submit" value="Add Products" className="btn btn-block" />
+           <input type="submit" value="Add Products" className="btn btn-secondary" />
 
 
 
