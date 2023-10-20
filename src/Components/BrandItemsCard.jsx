@@ -6,6 +6,7 @@ const BrandItemsCard = ({bands}) => {
     const {brand,image,type,price,rating,text,_id}=bands || {}
     return (
         <div className=' '>
+      
             <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img className='h-60' src={image} alt="Shoes" /></figure>
   <div className="card-body">

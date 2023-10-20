@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import BrandItemsCard from "./BrandItemsCard";
+import Slider from "./Slider";
 
 const BrandItems = () => {
   const [productBrand, setProductBrand] = useState();
@@ -21,7 +22,7 @@ const BrandItems = () => {
 
   return (
     <div>
-      <h1>total products : {products.length}</h1>
+     <Slider></Slider>
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
       {
         productBrand?.map(bands=><BrandItemsCard key={bands._id} bands={bands}></BrandItemsCard>)
