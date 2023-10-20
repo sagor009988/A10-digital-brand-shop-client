@@ -9,7 +9,9 @@ const MainLayout = () => {
     return (
         <div className='max-w-screen-2xl mx-auto  md:px-10 lg:px-20'>
                 <Navbar></Navbar>
+               <div className='my-10'>
                <Outlet></Outlet>
+               </div>
                <Footer></Footer>
         </div>
     );
