@@ -2,6 +2,13 @@ import React from "react";
 
 const DetailsCard = ({ prodctDetails }) => {
   const { brand, image, type, price, rating, text, _id } = prodctDetails || {};
+
+
+  const handleAddTOCart=()=>{
+
+  }
+
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -16,8 +23,10 @@ const DetailsCard = ({ prodctDetails }) => {
             <p className="py-6">
               {text}
             </p>
-            <button className="btn btn-primary">Get Started</button>
-            <button className="btn btn-primary">Get Started</button>
+            <div className="">
+            <button onClick={handleAddTOCart} className="btn btn-primary mr-5">ADD TO CART</button>
+          
+            </div>
           </div>
         </div>
       </div>
