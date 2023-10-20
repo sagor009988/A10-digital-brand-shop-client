@@ -14,10 +14,10 @@ const BrandItems = () => {
     const filterBrandProduct = products.filter(
       (product) => product.brand == id
     );
-    console.log(filterBrandProduct);
+    
     setProductBrand(filterBrandProduct);
   }, [id, products]);
-  console.log(productBrand);
+ 
 
   return (
     <div>

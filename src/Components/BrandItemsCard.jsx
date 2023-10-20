@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BrandItemsCard = ({bands}) => { 
-  console.log(bands);
+ 
     const {brand,image,type,price,rating,text,_id}=bands || {}
     return (
         <div className=' '>
@@ -20,7 +20,9 @@ const BrandItemsCard = ({bands}) => {
    </div>
    
     <div className='flex justify-between'>
+    <Link to={`/details/${_id}`}>
     <button className="btn btn-secondary ">Details</button>
+    </Link>
     <Link to={`/update/${_id}`}>
     <button className="btn btn-secondary ">Update</button>
     </Link>

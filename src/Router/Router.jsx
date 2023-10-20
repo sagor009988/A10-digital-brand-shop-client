@@ -8,6 +8,7 @@ import Error from "../Pages/Error";
 import Register from "../Components/Register";
 import BrandItems from "../Components/brandItems";
 import UpdateItems from "../Components/UpdateItems";
+import Details from "../Components/Details";
 
 
 const router=createBrowserRouter([
@@ -46,7 +47,13 @@ const router=createBrowserRouter([
                 path:'/update/:id',
                 element:<UpdateItems></UpdateItems>,
                 loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path:'details/:id',
+                element:<Details></Details>,
+                loader:()=>fetch('http://localhost:5000/product')
             }
+
         ]
         
     }
