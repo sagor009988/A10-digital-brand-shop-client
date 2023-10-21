@@ -1,4 +1,7 @@
+import { data } from "autoprefixer";
 import React from "react";
+import swal from "sweetalert";
+
 
 const DetailsCard = ({ prodctDetails }) => {
   const { brand, image, type, price, rating, text, _id } = prodctDetails || {};
@@ -6,7 +9,23 @@ const DetailsCard = ({ prodctDetails }) => {
 
   const handleAddTOCart=e=>{
     e.preventDefault()
-    const form=e.target;
+    const saveValue={ brand, image, type, price, rating, text}
+   
+    fetch('https://brand-shop-server-five-mu.vercel.app/productAdd',{
+      method:"POST",
+      headers:{
+        "content-type":"application/json"
+      },
+      body:JSON.stringify(saveValue)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data);
+      if(data.insertedId){
+        swal("Product Addeded to cart successfully", "Check My Cart", "success");
+      }
+    })
+    
 
   }
 
@@ -25,9 +44,13 @@ const DetailsCard = ({ prodctDetails }) => {
             <p className="py-6">
               {text}
             </p>
-            <div className="">
+            <p>Price : {price} BDT</p>
+            <div >
+            <form > 
+
             <button onClick={handleAddTOCart} className="btn btn-primary mr-5">ADD TO CART</button>
           
+            </form>
             </div>
           </div>
         </div>

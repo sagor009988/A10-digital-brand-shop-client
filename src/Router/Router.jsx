@@ -10,6 +10,7 @@ import BrandItems from "../Components/brandItems";
 import UpdateItems from "../Components/UpdateItems";
 import Details from "../Components/Details";
 import PrivateRoute from "../Components/PrivateRoute";
+import UpComingFeature from "../Components/UpComingFeature";
 
 
 const router=createBrowserRouter([
@@ -42,17 +43,22 @@ const router=createBrowserRouter([
             {
                 path:'/brandItems/:id',
                 element:<BrandItems></BrandItems>,
-                loader:()=>fetch('http://localhost:5000/product')
+                loader:()=>fetch('https://brand-shop-server-five-mu.vercel.app/product')
             },
             {
                 path:'/update/:id',
                 element:<UpdateItems></UpdateItems>,
-                loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+                loader:({params})=>fetch(`https://brand-shop-server-five-mu.vercel.app/product/${params.id}`)
             },
             {
                 path:'details/:id',
                 element:<PrivateRoute><Details></Details></PrivateRoute> ,
-                loader:()=>fetch('http://localhost:5000/product')
+                loader:()=>fetch('https://brand-shop-server-five-mu.vercel.app/product')
+            },
+            {
+                path:'/upComing',
+                element:<UpComingFeature></UpComingFeature>,
+                loader:()=>fetch('/upComing.json')
             }
 
         ]

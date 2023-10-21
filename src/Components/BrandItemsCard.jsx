@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rating from './Rating';
 
 const BrandItemsCard = ({bands}) => { 
  
@@ -17,7 +18,11 @@ const BrandItemsCard = ({bands}) => {
    </div>
    <div>
    <p className='text-bold'>Price : {price}</p>
-    <p>Rating : {rating}</p>
+    <p className=''>
+        <Rating
+        ></Rating>
+        
+    </p>
    </div>
    
     <div className='flex justify-between'>
